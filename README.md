@@ -3,7 +3,7 @@ Ember Coin > ATHENEUM COMING SOON
 
 FOR LATEST RELEASE FILES CLICK LINK BELOW
 ==========
-https://github.com/Allysquad/Ember/releases/tag/v1.1.5.3
+https://github.com/Allysquad/Ember/releases/tag/v1.1.5.4
 ==========
 
 
