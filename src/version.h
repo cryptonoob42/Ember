@@ -29,21 +29,20 @@ static const int DATABASE_VERSION = 70509;
 //
 // network protocol versioning
 //
-
-static const int PROTOCOL_VERSION = 77780;
+static const int PROTOCOL_VERSION = 77790;
 
 // intial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 210;
 
 // disconnect from peers older than this proto version,
 // Authoritative value is now _BEFORE, then a switch happens to MIN_PEER_PROTO_VERSION by epoch time specified by _WHEN
-static const int MIN_PEER_PROTO_VERSION = 77778;
-static const int MIN_PEER_PROTO_VERSION_BEFORE = 77776;
-static const int MIN_PEER_PROTO_VERSION_WHEN = 1509235200; // Sunday, October 29, 2017 12:00:00 AM UTC
+static const int MIN_PEER_PROTO_VERSION = 77790;
+static const int MIN_PEER_PROTO_VERSION_BEFORE = 77780;
+static const int MIN_PEER_PROTO_VERSION_WHEN = 1540080000; // Sunday, October 21, 2018 12:00:00 AM UTC (midnight)
 
 // nTime field added to CAddress, starting with this version;
 // if possible, avoid requesting addresses nodes older than this
-static const int CADDR_TIME_VERSION = 31402;
+static const int CADDR_TIME_VERSION = 31403;
 
 // only request blocks from nodes outside this range of versions
 static const int NOBLKS_VERSION_START = 0;
