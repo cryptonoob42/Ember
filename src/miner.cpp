@@ -486,8 +486,8 @@ bool CheckStake(CBlock* pblock, CWallet& wallet)
     if(!pblock->IsProofOfStake())
         return error("CheckStake() : %s is not a proof-of-stake block", hashBlock.GetHex());
 
-    // Dissallow rushed block generation for PoS [Thank you: Griffith]
-    if(!TestNet() && (pindexBest->GetBlockTime() + 180 < pblock->GetBlockTime())) // Check for 180 second spacing
+    // Disallow rushed block generation for PoS
+    if(!TestNet() && (pindexBest->GetBlockTime() + 180 > pblock->GetBlockTime())) // Check for >= 180 second spacing
          return error("CheckStake(): Block time check failed, block mined too quickly. Not enough spacing from previous block");
 
     // verify hash target and signature of coinstake tx
