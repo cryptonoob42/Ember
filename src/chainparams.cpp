@@ -100,18 +100,7 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        nTargetSpacing = 180; // Initially ~180 Sec during PoW
-        if(nBestHeight > nLastPoWBlock) // Scaled down for PoS only phase
-        {
-          nTargetSpacing = 180;
-        }
-        if(nBestHeight > nStartPoSBlock) // Scaled up for PoW/PoS twin phase
-        {
-          if(nBestHeight <= nLastPoWBlock)
-          {
-            nTargetSpacing = 400;
-          }
-        }
+        nTargetSpacing = 180;
         nTargetTimespan = 10 * nTargetSpacing;
         nStartPoSBlock = 3805;
     }
